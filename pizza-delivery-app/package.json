@@ -1,0 +1,14 @@
+{
+  "name": "pizza-delivery-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Root scripts to run backend and frontend together",
+  "scripts": {
+    "dev": "concurrently -n BACKEND,FRONTEND -c blue,magenta \"cd backend && npm run dev\" \"cd frontend && npm run dev\"",
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "seed": "cd backend && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
